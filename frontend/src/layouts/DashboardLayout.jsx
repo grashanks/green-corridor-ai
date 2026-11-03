@@ -89,7 +89,7 @@ export default function DashboardLayout() {
     try {
       setDemoRunning(true);
       const res = await simulationAPI.startDemo();
-      showMessage('HACKATHON DEMO STARTED! AMB-001 Priority Corridor Active.', 'success');
+      showMessage('DEMO STARTED! AMB-001 Priority Corridor Active.', 'success');
       navigate('/tracking');
     } catch (e) {
       showMessage('Failed to start demo scenario.', 'danger');
@@ -197,7 +197,7 @@ export default function DashboardLayout() {
               className="flex items-center gap-2 px-4 py-2 bg-[#26D28B] hover:bg-[#20b879] text-[#0C162A] font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg shadow-[#26D28B]/25 hover:shadow-[#26D28B]/40 active:scale-95 transition-all"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
-              {demoRunning ? 'Launching...' : 'START HACKATHON DEMO'}
+              {demoRunning ? 'Launching...' : 'START DEMO'}
             </button>
 
             {/* RESET DEMO BUTTON */}
