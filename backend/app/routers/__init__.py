@@ -1,0 +1,10 @@
+from .auth import router as auth_router
+from .vehicles import router as vehicles_router
+from .emergencies import router as emergencies_router
+from .routes import router as routes_router
+from .signals import router as signals_router
+from .tracking import router as tracking_router
+from .alerts import router as alerts_router
+from .simulation import router as simulation_router
+from .analytics import router as analytics_router
+from .ai_detect import router as ai_router

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #0C162A;
+  color: #F5F8FC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom dark tile invert for Leaflet OSM map */
+.dark-map .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+/* Custom glow effects */
+.glow-green {
+  box-shadow: 0 0 15px rgba(38, 210, 139, 0.4);
+}
+
+.glow-danger {
+  box-shadow: 0 0 15px rgba(255, 100, 110, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(66, 190, 226, 0.4);
+}
+
+/* Pulse animation for active emergency */
+@keyframes corridor-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-corridor-pulse {
+  animation: corridor-pulse 2s infinite ease-in-out;
+}

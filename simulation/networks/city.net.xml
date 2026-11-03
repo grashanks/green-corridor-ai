@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,2400.00,600.00" origBoundary="77.5946,12.9716,77.6150,12.9830" projParameter="!"/>
+
+    <!-- Edge Definitions -->
+    <edge id="entry_w" from="node_w0" to="node_int1" priority="3" numLanes="2" speed="16.67"/>
+    <edge id="edge_1_2" from="node_int1" to="node_int2" priority="3" numLanes="2" speed="16.67"/>
+    <edge id="edge_2_3" from="node_int2" to="node_int3" priority="3" numLanes="2" speed="16.67"/>
+    <edge id="edge_3_4" from="node_int3" to="node_int4" priority="3" numLanes="2" speed="16.67"/>
+    <edge id="exit_hosp" from="node_int4" to="node_hosp" priority="3" numLanes="2" speed="16.67"/>
+
+    <!-- Cross Traffic Edges -->
+    <edge id="cross_1_n" from="node_1n" to="node_int1" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="cross_2_n" from="node_2n" to="node_int2" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="cross_3_n" from="node_3n" to="node_int3" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="cross_4_n" from="node_4n" to="node_int4" priority="2" numLanes="1" speed="13.89"/>
+
+    <!-- Traffic Light Logics -->
+    <tlLogic id="TLS_INT1" type="static" programID="0" offset="0">
+        <phase duration="30" state="GGrr"/>
+        <phase duration="3"  state="yyrr"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="25" state="rrGG"/>
+        <phase duration="3"  state="rryy"/>
+        <phase duration="2"  state="rrrr"/>
+    </tlLogic>
+    <tlLogic id="TLS_INT2" type="static" programID="0" offset="5">
+        <phase duration="30" state="GGrr"/>
+        <phase duration="3"  state="yyrr"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="25" state="rrGG"/>
+        <phase duration="3"  state="rryy"/>
+        <phase duration="2"  state="rrrr"/>
+    </tlLogic>
+    <tlLogic id="TLS_INT3" type="static" programID="0" offset="10">
+        <phase duration="30" state="GGrr"/>
+        <phase duration="3"  state="yyrr"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="25" state="rrGG"/>
+        <phase duration="3"  state="rryy"/>
+        <phase duration="2"  state="rrrr"/>
+    </tlLogic>
+    <tlLogic id="TLS_INT4" type="static" programID="0" offset="15">
+        <phase duration="30" state="GGrr"/>
+        <phase duration="3"  state="yyrr"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="25" state="rrGG"/>
+        <phase duration="3"  state="rryy"/>
+        <phase duration="2"  state="rrrr"/>
+    </tlLogic>
+</net>
